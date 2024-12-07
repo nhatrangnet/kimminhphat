@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->share('categories', DB::table('categories')->select( 'slug', 'name' )->where('parent_id', 0 )->get() );
+        if ( Schema::hasTable( 'categories' ) ) {
+            view()->share('categories', DB::table('categories')->select( 'slug', 'name' )->where('parent_id', 0 )->get() );
+        }
     }
 }

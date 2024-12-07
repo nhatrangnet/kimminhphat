@@ -10,9 +10,7 @@ class PageController extends Controller
 {
     public function home(): View
     {
-        return view( 'homepage', [
-            'categories' => $this->categories
-        ] );
+        return view( 'homepage' );
     }
     /**
      * Show the page
