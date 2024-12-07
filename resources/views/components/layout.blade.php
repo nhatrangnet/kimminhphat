@@ -27,11 +27,11 @@
             <a href="/" class="nav-link active" aria-current="page">Home</a>
           </li>
           <li class="nav-item hover" data-aos="fade-up"><a href="{{ url( 'page/introduce' ) }}" class="nav-link">{{ __('Giới thiệu') }}</a></li>
-          @php
-            foreach( $categories as $cat ) {
-              echo '<li class="nav-item" data-aos="fade-up"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link">' . __( $cat['name'] ) . '</a></li>';
-            }
-          @endphp
+          @if( $categories )
+            @foreach( $categories as $cat )
+              <li class="nav-item" data-aos="fade-up"><a href="{{ route( 'category.show', $cat['slug'] ) }}" class="nav-link">{{ __( $cat['name'] ) }}</a></li>
+            @endforeach
+          @endif
           <li class="nav-item" data-aos="fade-up"><a href="{{ url( '/page/contact' ) }}" class="nav-link">Contact</a></li>
         </ul>
 
