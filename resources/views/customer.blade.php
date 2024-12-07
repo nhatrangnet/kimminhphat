@@ -13,7 +13,7 @@
         <div class="row">
             @if( $post->slug != 'contact' )
                 <div class="col col4">
-                    <img src="{{ \Storage::url( $post->image ) }}" alt="{{ $post->slug }}">
+                    <img src="{{ \Storage::url( $post->thumbnail ) }}" alt="{{ $post->slug }}">
                 </div>
                 <div class="col col8">
                     {!! $post->excerpt !!}
@@ -23,7 +23,7 @@
         <hr />
         <div class="row">
             <div class="col">
-                {!! $post->body !!}
+                {!! $post->content !!}
             </div>  
         </div>
     </div>

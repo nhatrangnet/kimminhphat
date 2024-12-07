@@ -23,7 +23,7 @@
         <hr />
         <div class="row">
             <div class="col">
-                {!! $page->body !!}
+                {!! $page->content !!}
             </div>  
         </div>
     </div>

@@ -35,7 +35,7 @@ class UserResource extends Resource
                 ->storeFiles(false)
                 ->moveFiles()
                 ->maxSize(2024)
-                ->minFiles(1)
+                ->minFiles(0)
                 ->maxFiles(8),
             ]);
     }
