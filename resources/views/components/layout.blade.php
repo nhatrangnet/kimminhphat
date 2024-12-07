@@ -29,7 +29,7 @@
           <li class="nav-item hover" data-aos="fade-up"><a href="{{ url( 'page/introduce' ) }}" class="nav-link">{{ __('Giới thiệu') }}</a></li>
           @php
             foreach( $categories as $cat ) {
-              echo '<li class="nav-item" data-aos="fade-up"><a href="' . route( 'category.show', $cat->slug ) . '" class="nav-link">' . __( $cat->name ) . '</a></li>';
+              echo '<li class="nav-item" data-aos="fade-up"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link">' . __( $cat['name'] ) . '</a></li>';
             }
           @endphp
           <li class="nav-item" data-aos="fade-up"><a href="{{ url( '/page/contact' ) }}" class="nav-link">Contact</a></li>
@@ -67,7 +67,7 @@
               <li class="nav-item mb-2" data-aos="fade-up-left"><a href="{{ url( 'page/introduce' ) }}" class="nav-link p-0 text-body-secondary">{{ __('Giới thiệu') }}</a></li>
               @php
                 foreach( $categories as $cat ) {
-                  echo '<li class="nav-item mb-2" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat->slug ) . '" class="nav-link p-0 text-body-secondary">' . __( $cat->name ) . '</a></li>';
+                  echo '<li class="nav-item mb-2" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link p-0 text-body-secondary">' . __( $cat['name'] ) . '</a></li>';
                 }
               @endphp
               <li class="nav-item mb-2" data-aos="fade-up-right"><a href="{{ url( 'page/contact' ) }}" class="nav-link p-0 text-body-secondary">Contact</a></li>

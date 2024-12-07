@@ -22,8 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if ( Schema::hasTable( 'categories' ) ) {
-            // view()->share('categories', DB::table('categories')->select( 'slug', 'name' )->where('parent_id', 0 )->get() );
-            view()->share('categories', [ 'News' => 'news', 'Product' => 'product' ] );
+            view()->share('categories', json_decode(json_encode( DB::table('categories')->select( 'slug', 'name' )->where('parent_id', 0 )->get() ), true) );
         }
     }
 }
