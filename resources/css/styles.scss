@@ -1,0 +1,76 @@
+*{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  font-style: normal;
+}
+header{
+/* 	background: url('https://kimminhphat.com/images/thiet-ke-xay-dung-small.jpg') top center no-repeat; */
+}
+
+.nav-item .nav-link:hover{
+  color: red;
+}
+.carousel{
+	margin-bottom: 4rem;
+}
+
+.marketing .brick{
+	height: 140px;
+	line-height: 140px;
+}
+.home-video{
+	position: relative;
+  height: 100%;
+  min-height: 400px;
+  background: linear-gradient(rgba(254, 218, 154, 0.1), rgba(254, 218, 154, 0.1)), url(../img/fact.jpg);
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.text-service h2 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+}
+.pagination{
+  justify-content: center;
+}
+.my-carousel{
+    background-color: rgb(234, 243, 255) !important;
+}
+.carousel-item .max-w-4xl{
+  max-width: 50rem;
+}
+.page-content img{
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 576px){
+
+}
+@media (min-width: 768px){
+  .marketing .brick{
+    height: 250px;
+    line-height: 250px;
+  }
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+
+}
+@media (min-width: 1400px){
+
+}
