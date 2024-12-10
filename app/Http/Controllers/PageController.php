@@ -17,7 +17,7 @@ class PageController extends Controller
      */
     public function page( $slug ): View
     {
-        $page = DB::table('posts')->where('category_id', 1 )->where('slug', $slug )->paginate(15);
+        $page = DB::table('posts')->where('slug', $slug )->paginate(15);
 
         if ( count( $page ) == 0 ) {
             return view('404');

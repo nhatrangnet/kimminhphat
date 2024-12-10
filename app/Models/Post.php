@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -27,6 +28,14 @@ class Post extends Model
     protected $casts = [
         'images' => 'array',
     ];
+
+    protected static function boot() {
+        parent::boot();
+
+        static::creating(function ($post) {
+            $post->slug = Str::slug($post->title);
+        });
+    }
 
     /**
      * Scope a query to only published scopes.

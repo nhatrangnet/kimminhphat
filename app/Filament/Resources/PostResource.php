@@ -11,12 +11,14 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
@@ -34,22 +36,23 @@ class PostResource extends Resource
             ->schema([
                 TextInput::make('title')
                     ->live()
-                    ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state, ?Post $record) {
-                            if ( $operation == 'edit' && $record->isPublished()) {
-                                return;
-                            }
-                            if ( ( $get('slug') ?? '' ) !== Str::slug($old)) {
-                                return;
-                            }
-                            $set('slug', Str::slug($state));
-                        }
-                    )
+                    // ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state, ?Post $record) {
+                    //         if ( $operation == 'edit' && $record->isPublished()) {
+                    //             return;
+                    //         }
+                    //         if ( ( $get('slug') ?? '' ) !== Str::slug($old)) {
+                    //             return;
+                    //         }
+
+                    //         $set('slug', Str::slug($state));
+                    //     }
+                    // )
                     ->required(),
-                TextInput::make('slug')
-                    ->maxLength(255)
-                    // ->unique( Post::class, 'slug', fn ($record) => $record)
-                    ->disabled( fn (?string $operation, ?Post $record) => $operation == 'edit' && $record->isPublished() )
-                    ->required(),
+                // TextInput::make('slug')
+                //     ->maxLength(255)
+                //     // ->unique( Post::class, 'slug', fn ($record) => $record)
+                //     ->disabled( fn (?string $operation, ?Post $record) => $operation == 'edit' && $record->isPublished() )
+                //     ->required(),
                 MarkdownEditor::make('excerpt')->label( __('Preview') )->columnSpan(2),
                 MarkdownEditor::make('content')->columnSpan(2),
                 Select::make('category_id')->options(
@@ -65,7 +68,7 @@ class PostResource extends Resource
                     // ->storeFiles(false)
                     ->moveFiles()
                     ->maxSize(2024)
-                    ->minFiles(1)
+                    ->minFiles(0)
                     ->maxFiles(8),
             ])->columns(2);
     }
@@ -75,6 +78,7 @@ class PostResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
+                TextColumn::make('updated_at')->date('d-m-Y'),
             ])
             ->filters([
                 //
