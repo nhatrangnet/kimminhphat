@@ -29,7 +29,7 @@
                                     </a>
                                 </h3>
                                 <p class="m-0 mt-3 text-body-secondary line-clamp-2 text-sm leading-6">
-                                    {{ $post->excerpt }}
+                                    {{ str( $post->excerpt )->markdown()->sanitizeHtml() }}
                                 </p>
                             </div>
                         </article>

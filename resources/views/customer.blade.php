@@ -16,14 +16,14 @@
                     <img src="{{ \Storage::url( $post->thumbnail ) }}" alt="{{ $post->slug }}">
                 </div>
                 <div class="col col8">
-                    {!! $post->excerpt !!}
+                    {!! str($post->excerpt)->markdown()->sanitizeHtml() !!}
                 </div>
             @endif
         </div>
         <hr />
         <div class="row">
             <div class="col">
-                {!! $post->content !!}
+                {!! str($post->content)->markdown()->sanitizeHtml() !!}
             </div>  
         </div>
     </div>

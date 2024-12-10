@@ -103,8 +103,13 @@
         </div>
     </div>
 
-    <div class="my-carousel overflow-hidden">
+    {{-- testimonial --}}
+    <div class="my-carousel overflow-hidden testimonials-slider ">
       <div class="container py-sm-6 py-xl-6">
+        <div class="row text-center mb-2">
+          <span class="fw-semibold text-primary"></span>
+          <h4 class="h1 mt-3 mb-0">{{ __('Testimonial') }}</h4>
+        </div>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item">
@@ -121,7 +126,7 @@
                                 <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-3 text-body-emphasis" fill="currentColor">
                                     <circle cx="1" cy="1" r="1"></circle>
                                 </svg>
-                                <div class="text-body-secondary">Ông Đức Anh - giám đốc công ty Hattlaw</div>
+                                <div class="fw-bold">Ông Đức Anh - giám đốc công ty Hattlaw</div>
                             </div>
                         </figcaption>
                     </figure>
@@ -142,7 +147,7 @@
                                 <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-3 text-body-emphasis" fill="currentColor">
                                     <circle cx="1" cy="1" r="1"></circle>
                                 </svg>
-                                <div class="text-body-secondary">Khách hàng Lô 50, Đường 92, KĐT Thái Hưng, KĐT Mỹ Gia, Tp. Nha Trang</div>
+                                <div class="fw-bold">Khách hàng Lô 50, Đường 92, KĐT Thái Hưng, KĐT Mỹ Gia, Tp. Nha Trang</div>
                             </div>
                         </figcaption>
                     </figure>
@@ -163,7 +168,7 @@
                                 <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-3 text-body-emphasis" fill="currentColor">
                                     <circle cx="1" cy="1" r="1"></circle>
                                 </svg>
-                                <div class="text-body-secondary">Bà Phùng Thị Trang - khách hàng Huỳnh Tấn Phát Q7</div>
+                                <div class="fw-bold">Bà Phùng Thị Trang - khách hàng Huỳnh Tấn Phát Q7</div>
                             </div>
                         </figcaption>
                     </figure>
@@ -181,4 +186,7 @@
         </div>
       </div>
     </div>
+
+    {{-- end testimonial --}}
+
 </x-layout>
