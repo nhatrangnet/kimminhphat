@@ -19,7 +19,7 @@
       <header class="px-0 px-md-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <div class="col-md-3 mb-2 mb-md-0">
           <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-            <img src="{{ \Storage::url( config( 'site.logo' ) ) }}" alt="kim-minh-phat-logo" style="height: 40px;">
+            <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 40px;">
           </a>
         </div>
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -58,7 +58,7 @@
       <footer class="pt-5">
         <div class="row">
           <div class="col-12 col-md-4 mb-3 text-center">
-            <img src="{{ \Storage::url( config( 'site.logo' ) ) }}" alt="kim-minh-phat-logo" style="height: 60px;">
+            <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 60px;">
           </div>
 
           <div class="col-6 col-md-2 mb-3">
