@@ -22,7 +22,6 @@
         <hr />
         <div class="row">
             <div class="col">
-                {!! $post->content !!}
                 {!! str( $post->content )->markdown()->sanitizeHtml() !!}
                 @php
                     $images = json_decode($post->images, true );

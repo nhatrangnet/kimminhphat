@@ -21,8 +21,7 @@
         </div>
         <hr />
         <div class="row">
-            <div class="col">
-                {!! $post->content !!}
+            <div class="col-12">
                 {!! str( $post->content )->markdown()->sanitizeHtml() !!}
                 @php
                     $images = json_decode($post->images, true );
@@ -41,7 +40,7 @@
                   </div>
                 </section>
             </div>
-            <div class="col">
+            <div class="col-12">
                 <h4>{{ __( 'Main address' ) }}</h4>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4057.3876933886218!2d106.64524997515058!3d10.766068259384468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e943fee0247%3A0x123c108a29f8f891!2zMTM1IELDrG5oIFRo4bubaSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMTEsIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e1!3m2!1sen!2s!4v1733993926144!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
