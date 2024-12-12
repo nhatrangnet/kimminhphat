@@ -54,7 +54,10 @@ class PostResource extends Resource
                 //     ->disabled( fn (?string $operation, ?Post $record) => $operation == 'edit' && $record->isPublished() )
                 //     ->required(),
                 RichEditor::make('excerpt')->label( __('Preview') )->columnSpan(2),
-                RichEditor::make('content')->columnSpan(2),
+                RichEditor::make('content')->columnSpan(2)
+                    ->extraAttributes(['x-ref' => 'editor'])
+                    ->hintAction(\Filament\Forms\Components\Actions\Action::make('fullScreen')
+                    ->alpineClickHandler('$refs.editor.requestFullscreen()')),
                 Select::make('category_id')->options(
                    Category::all()->pluck('name', 'id')
                 ),
