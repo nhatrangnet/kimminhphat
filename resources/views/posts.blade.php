@@ -25,11 +25,11 @@
                                     </a>
                                 </h3>
                             </div>
-                            <div class="mt-1 d-flex column-gap-3 text-end">
+                            {{-- <div class="mt-1 d-flex column-gap-3 text-end">
                                 <time datetime="{{ date('Y-m-d', strtotime( $post->created_at )); }}" class="text-body-tertiary fst-italic fs-6 fs-">
                                     {{ date('d-m-Y', strtotime( $post->created_at )); }}
                                 </time>
-                            </div>
+                            </div> --}}
                         </article>
                     </div>
                     @endforeach
