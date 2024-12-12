@@ -53,8 +53,8 @@ class PostResource extends Resource
                 //     // ->unique( Post::class, 'slug', fn ($record) => $record)
                 //     ->disabled( fn (?string $operation, ?Post $record) => $operation == 'edit' && $record->isPublished() )
                 //     ->required(),
-                MarkdownEditor::make('excerpt')->label( __('Preview') )->columnSpan(2),
-                MarkdownEditor::make('content')->columnSpan(2),
+                RichEditor::make('excerpt')->label( __('Preview') )->columnSpan(2),
+                RichEditor::make('content')->columnSpan(2),
                 Select::make('category_id')->options(
                    Category::all()->pluck('name', 'id')
                 ),
@@ -65,7 +65,6 @@ class PostResource extends Resource
                     ->multiple()
                     ->panelLayout('grid')
                     ->downloadable()
-                    // ->storeFiles(false)
                     ->moveFiles()
                     ->maxSize(2024)
                     ->minFiles(0)

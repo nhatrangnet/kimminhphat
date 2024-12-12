@@ -9,17 +9,11 @@
                 <div class="row row-cols-1 row-cols-md-2 gy-5 gx-md-5 justify-content-center justify-content-xl-between">
                     @foreach( $posts as $post )
                     <div class="col pt-5 pt-xl-4 aos-init aos-animate" data-aos-delay="0" data-aos="fade" data-aos-duration="3000">
-                        <article class="d-flex max-w-xl mx-auto mx-xl-0 flex-column align-items-start justify-content-between">
+                        <article class="d-flex max-w-xl mx-auto mx-xl-0 flex-column justify-content-between">
                             <div class="position-relative w-100">
                                 <div class="ratio" style="--bs-aspect-ratio: 66.66%;">
                                     <img src="{{ \Storage::url( $post->thumbnail ) }}" class="object-fit-cover rounded-3" alt="Blog image" loading="lazy">
                                 </div>
-                            </div>
-
-                            <div class="mt-1 d-flex column-gap-3 text-end">
-                                <time datetime="{{ date('Y-m-d', strtotime( $post->created_at )); }}" class="text-body-tertiary fst-italic fs-6">
-                                    {{ date('d-m-Y', strtotime( $post->created_at )); }}
-                                </time>
                             </div>
 
                             <div class="position-relative">
@@ -28,9 +22,11 @@
                                         {{ $post->title }}
                                     </a>
                                 </h3>
-                                <p class="m-0 mt-3 text-body-secondary line-clamp-2 text-sm leading-6">
-                                    {{ str( $post->excerpt )->markdown()->sanitizeHtml() }}
-                                </p>
+                            </div>
+                            <div class="mt-1 d-flex column-gap-3 text-end">
+                                <time datetime="{{ date('Y-m-d', strtotime( $post->created_at )); }}" class="text-body-tertiary fst-italic fs-6 fs-">
+                                    {{ date('d-m-Y', strtotime( $post->created_at )); }}
+                                </time>
                             </div>
                         </article>
                     </div>

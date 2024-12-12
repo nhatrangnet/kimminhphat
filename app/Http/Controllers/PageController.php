@@ -22,7 +22,7 @@ class PageController extends Controller
         if ( count( $page ) == 0 ) {
             return view('404');
         }
-        return view('page', [
+        return view('post', [
             'page'  => $page->count() === 1 ? $page[ 0 ] : null,
             'pages' => $page->count() === 1 ? null : $page,
         ]);
@@ -69,11 +69,12 @@ class PageController extends Controller
     public function customer( $slug ): View
     {
         $post = DB::table('posts')->where('slug', $slug )->where('status', 1 )->first();
+
         if ( empty( $post ) ) {
             return view('404');
         }
 
-        return view('customer', [
+        return view('post', [
             'post' => $post,
         ]);
     }
