@@ -22,9 +22,23 @@ class PageController extends Controller
         if ( count( $page ) == 0 ) {
             return view('404');
         }
-        return view('post', [
-            'page'  => $page->count() === 1 ? $page[ 0 ] : null,
-            'pages' => $page->count() === 1 ? null : $page,
+
+        if ( $page->count() === 1 ) {
+            switch( $slug ) {
+                case 'contact':
+                    return view('contact', [
+                        'post'  => $page[ 0 ]
+                    ]);
+                    break;
+                default:
+                    return view('post', [
+                        'post'  => $page[ 0 ]
+                    ]);
+            }
+        }
+
+        return view('posts', [
+            'pages' => $page,
         ]);
     }
 

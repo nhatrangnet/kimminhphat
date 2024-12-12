@@ -1,9 +1,10 @@
-import './bootstrap';
-
 // Import all of Bootstrap's JS
 import * as Popper from '@popperjs/core';
 window.Popper = Popper;
-import 'bootstrap';
+import * as bootstrap from 'bootstrap';
+window.bootstrap = bootstrap;
+
+import './bootstrap';
 
 
 import AOS from 'aos';
