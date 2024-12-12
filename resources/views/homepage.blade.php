@@ -66,7 +66,7 @@
         </div><!-- /.row -->
     </div>
 
-    <hr class="featurette-divider">
+    <p class="my-line" data-aos="fate-right-right"></p>
 
     <div class="container-fluid faqt py-6 mb-5">
         <div class="container">
