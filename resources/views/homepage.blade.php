@@ -13,7 +13,7 @@
             </div>
           @endforeach
         @endif
-        <div class="carousel-item">
+        <div class="carousel-item {{ count($features) === 0 ? 'active':'' }}">
           <img src="images/banner-4.jpg" class="d-block w-100" alt="Kim Minh Phat company">
         </div>
       </div>
