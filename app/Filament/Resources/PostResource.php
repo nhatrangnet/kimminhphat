@@ -17,11 +17,9 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Get;
-use Filament\Forms\Set;
+use Filament\Forms\Components\Toggle;
 use Illuminate\Support\Str;
 
 class PostResource extends Resource
@@ -61,6 +59,7 @@ class PostResource extends Resource
                 Select::make('category_id')->options(
                    Category::all()->pluck('name', 'id')
                 ),
+                Toggle::make('feature')->inline(false)->label(__('Feature')),
                 FileUpload::make('thumbnail')->disk('public')->directory('thumbnail'),
                 FileUpload::make('images')
                     ->disk('public')

@@ -10,7 +10,12 @@ class PageController extends Controller
 {
     public function home(): View
     {
-        return view( 'homepage' );
+        //get feature post
+        $features = DB::table('posts')->select('slug', 'thumbnail')->where('feature', 1 )->orderBy('updated_at', 'DESC')->get(10)->pluck('thumbnail', 'slug')->toArray();
+
+        return view( 'homepage', [
+            'features' => $features
+        ] );
     }
     /**
      * Show the page

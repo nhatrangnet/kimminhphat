@@ -27,6 +27,8 @@ class Post extends Model
 
     protected $casts = [
         'images' => 'array',
+        'status' => 'boolean',
+        'feature' => 'boolean',
     ];
 
     protected static function boot() {
