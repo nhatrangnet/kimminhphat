@@ -18,6 +18,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Illuminate\Support\Str;
@@ -52,7 +53,13 @@ class PostResource extends Resource
                 //     ->disabled( fn (?string $operation, ?Post $record) => $operation == 'edit' && $record->isPublished() )
                 //     ->required(),
                 RichEditor::make('excerpt')->label( __('Preview') )->columnSpan(2),
-                RichEditor::make('content')->columnSpan(2)
+                // RichEditor::make('content')->columnSpan(2)
+                //     ->extraAttributes(['x-ref' => 'editor'])
+                //     ->hintAction(\Filament\Forms\Components\Actions\Action::make('fullScreen')
+                //     ->alpineClickHandler('$refs.editor.requestFullscreen()')),
+                TinyEditor::make('content')
+                    ->profile('default|simple|full|minimal|none|custom')
+                    ->columnSpan('full')
                     ->extraAttributes(['x-ref' => 'editor'])
                     ->hintAction(\Filament\Forms\Components\Actions\Action::make('fullScreen')
                     ->alpineClickHandler('$refs.editor.requestFullscreen()')),
