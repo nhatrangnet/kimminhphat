@@ -59,7 +59,7 @@
     <div class="container">
       <footer class="pt-5">
         <div class="row">
-          <div class="col-12 col-md-4 mb-3 text-center">
+          <div class="col-12 col-md-4 mb-3 text-center" data-aos="flip-up" data-aos-duration="2000">
             <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 60px;">
             <p class="fw-bold mt-2"> {{ __('Công ty TNHH Xây Dựng Thương Mại Kim Minh Phát') }}</p>
             <p><b>Phone:</b> 0979.357.494 (Mr.Phát) - 0903.046.057 (Mr.Quân)</p>
