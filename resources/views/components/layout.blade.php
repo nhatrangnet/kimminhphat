@@ -61,18 +61,22 @@
         <div class="row">
           <div class="col-12 col-md-4 mb-3 text-center">
             <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 60px;">
+            <p class="fw-bold mt-2"> {{ __('Công ty TNHH Xây Dựng Thương Mại Kim Minh Phát') }}</p>
+            <p><b>Phone:</b> 0979.357.494 (Mr.Phát) - 0903.046.057 (Mr.Quân)</p>
+
+            <p><b>Email:</b> kimminhphat135@gmail.com</p>
           </div>
 
           <div class="col-6 col-md-2 mb-3">
             <ul class="nav flex-column">
-              <li class="nav-item mb-2" data-aos="fade-up-left"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2" data-aos="fade-up-left"><a href="{{ url( 'page/introduce' ) }}" class="nav-link p-0 text-body-secondary">{{ __('Giới thiệu') }}</a></li>
+              <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="/" class="nav-link p-0">Home</a></li>
+              <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="{{ url( 'page/introduce' ) }}" class="nav-link p-0">{{ __('Giới thiệu') }}</a></li>
               @php
                 foreach( $categories as $cat ) {
-                  echo '<li class="nav-item mb-2" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link p-0 text-body-secondary">' . __( $cat['name'] ) . '</a></li>';
+                  echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link p-0">' . __( $cat['name'] ) . '</a></li>';
                 }
               @endphp
-              <li class="nav-item mb-2" data-aos="fade-up-right"><a href="{{ url( 'page/contact' ) }}" class="nav-link p-0 text-body-secondary">Contact</a></li>
+              <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-right"><a href="{{ url( 'page/contact' ) }}" class="nav-link p-0">Contact</a></li>
             </ul>
           </div>
 
