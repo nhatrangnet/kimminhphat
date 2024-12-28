@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
@@ -47,7 +48,9 @@ class CategoryResource extends Resource
                     // ->unique( Category::class, 'slug', fn ($record) => $record)
                     ->disabled( fn (?string $operation, ?Category $record) => $operation == 'edit' && $record->isPublished() )
                     ->required(),
-
+                Select::make('parent_id')
+                ->label( __('Parent') )
+                ->options( Category::all()->pluck('name', 'id')),
             ]);
     }
 

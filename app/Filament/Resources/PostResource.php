@@ -63,7 +63,7 @@ class PostResource extends Resource
                     ->extraAttributes(['x-ref' => 'editor'])
                     ->hintAction(\Filament\Forms\Components\Actions\Action::make('fullScreen')
                     ->alpineClickHandler('$refs.editor.requestFullscreen()')),
-                Select::make('category_id')->options(
+                Select::make('category_id')->label(__('Category'))->options(
                    Category::all()->pluck('name', 'id')
                 ),
                 Toggle::make('feature')->inline(false)->label(__('Feature')),

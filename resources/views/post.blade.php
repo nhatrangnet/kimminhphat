@@ -22,7 +22,7 @@
         <hr />
         <div class="row">
             <div class="col">
-                {!! str( $post->content )->markdown()->sanitizeHtml() !!}
+                {!! $post->content !!}
                 @php
                     $images = json_decode($post->images, true );
                 @endphp
