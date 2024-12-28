@@ -1,5 +1,5 @@
-import { Livewire } from '../../vendor/livewire/livewire/dist/livewire.esm';
-Livewire.start()
+// import { Livewire } from '../../vendor/livewire/livewire/dist/livewire.esm';
+// Livewire.start()
 
 // Import all of Bootstrap's JS
 import * as Popper from '@popperjs/core';
