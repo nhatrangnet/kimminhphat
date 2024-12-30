@@ -37,7 +37,7 @@
 
                   echo '<li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                          '. $cat['name'] .'
+                          '. __( $cat['name'] ) .'
                         </a>
                         <ul class="dropdown-menu show" data-bs-popper="static">
                           ' . $sublists . '
