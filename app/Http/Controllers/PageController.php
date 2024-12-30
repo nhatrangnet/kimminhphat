@@ -62,6 +62,12 @@ class PageController extends Controller
             return view('404');
         }
 
+        if( count( $posts ) === 1 ) {
+            return view('post', [
+                'post' => $posts[ 0 ],
+            ]);
+        }
+
         return view('posts', [
             'title' => $category->name,
             'posts' => $posts,
@@ -79,6 +85,13 @@ class PageController extends Controller
         if ( count( $posts ) == 0 ) {
             return view('404');
         }
+
+        if( count( $posts ) === 1 ) {
+            return view('post', [
+                'post' => $posts[ 0 ],
+            ]);
+        }
+
         return view('posts', [
             'title' => $category->name,
             'posts' => $posts,

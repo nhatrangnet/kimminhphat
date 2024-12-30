@@ -22,7 +22,16 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if ( Schema::hasTable( 'categories' ) ) {
-            view()->share('categories', json_decode(json_encode( DB::table('categories')->select( 'slug', 'name' )->where('parent_id', 0 )->get() ), true) );
+            $categories = DB::table('categories')->select('id', 'slug', 'name')->where('parent_id', 0 )->orderBy('updated_at', 'DESC')->get()->toArray();
+            $categories = json_decode(json_encode($categories), true);
+
+            if ( count( $categories ) > 0 ) {
+                foreach( $categories as $key => $cat ){
+                    $categories[ $key ][ 'sub' ] = DB::table('categories')->select('slug', 'name')->where('parent_id', $cat['id'] )->orderBy('updated_at', 'DESC')->get()->pluck('name', 'slug')->toArray();
+                }
+            }
+
+            view()->share('categories', $categories );
         }
     }
 }

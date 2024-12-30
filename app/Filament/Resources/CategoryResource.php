@@ -49,8 +49,8 @@ class CategoryResource extends Resource
                     ->disabled( fn (?string $operation, ?Category $record) => $operation == 'edit' && $record->isPublished() )
                     ->required(),
                 Select::make('parent_id')
-                ->label( __('Parent') )
-                ->options( Category::all()->pluck('name', 'id')),
+                    ->label( __('Parent') )
+                    ->options( Category::all()->where('parent_id', 0 )->pluck('name', 'id') ),
             ]);
     }
 
