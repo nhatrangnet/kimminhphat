@@ -4,7 +4,7 @@
     </x-slot>
     <div class="container">
         <div class="row gx-xl-5 justify-content-between">
-            <div class="col-12 col-xxl-8">
+            <div class="col-12">
                 <h3 class="text-body-emphasis" data-aos="fade-up">{{ __( $title ) }}</h3>
                 <div class="row row-cols-1 row-cols-md-3 row-cols-xxl-4 gy-5 gx-md-5 justify-content-center justify-content-xl-between">
                     @foreach( $posts as $post )
