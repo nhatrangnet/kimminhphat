@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SettingsResource\Pages;
 use App\Filament\Resources\SettingsResource\RelationManagers;
-use App\Models\Settings;
+use App\Models\MySettings;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -19,7 +19,7 @@ use Filament\Tables\Columns\TextColumn;
 
 class SettingsResource extends Resource
 {
-    protected static ?string $model = Settings::class;
+    protected static ?string $model = MySettings::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Settings extends Model
+class MySettings extends Model
 {
+    protected $table = 'mysettings';
     protected $fillable = [
         'key',
         'value',
