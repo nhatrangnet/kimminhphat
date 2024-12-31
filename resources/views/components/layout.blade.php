@@ -32,14 +32,14 @@
                 if( !empty( $cat['sub'] ) ) {
                   $sublists = '';
                   foreach( $cat['sub'] as $slug => $name ) {
-                    $sublists .= '<li data-aos="fade-up"><a href=" '. route( 'category.show', $slug ) .'" class="nav-link dropdown-item"> ' . __( $name ) . '</a></li>';
+                    $sublists .= '<li><a href=" '. route( 'category.show', $slug ) .'" class="nav-link dropdown-item"> ' . __( $name ) . '</a></li>';
                   }
 
                   echo '<li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
                           '. __( $cat['name'] ) .'
                         </a>
-                        <ul class="dropdown-menu show" data-bs-popper="static">
+                        <ul class="dropdown-menu" data-bs-popper="static">
                           ' . $sublists . '
                         </ul>
                       </li>';
