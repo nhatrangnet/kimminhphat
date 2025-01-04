@@ -6,8 +6,11 @@
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item {{ count($features) === 0 ? 'active':'' }}">
-          <img src="images/banner-4.jpg" class="d-block w-100" alt="Kim Minh Phat company">
+        <div class="carousel-item active">
+          <img src="images/banner-1.jpg" class="d-block w-100" alt="Kim Minh Phat company">
+        </div>
+        <div class="carousel-item ">
+          <img src="images/banner-2.jpg" class="d-block w-100" alt="Kim Minh Phat company">
         </div>
         @if ( count($features) > 0 )
           @foreach( $features as $slug => $thumb )
