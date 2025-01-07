@@ -12,8 +12,8 @@
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
         @stack('css')
+        <meta name="google-site-verification" content="o-xd3NzemBu7TUyaWUoBcTw9dd6gJkkfJ7m9MdTu_gM" />
 </head>
-
 <body>
     <div class="container1 main-menu">
       <header class="px-0 px-md-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
