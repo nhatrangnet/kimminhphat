@@ -7,14 +7,19 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/banner-1.jpg" class="d-block w-100" alt="Kim Minh Phat company">
+             <video width="100%" height="100%" preload="true" autoPlay muted controls>
+                <source src="images/new-year-eve.mp4" type="video/mp4">
+              </video>
         </div>
+        {{-- <div class="carousel-item">
+          <img src="images/banner-1.jpg" class="d-block w-100" alt="Kim Minh Phat company">
+        </div> --}}
         <div class="carousel-item ">
           <img src="images/banner-2.jpg" class="d-block w-100" alt="Kim Minh Phat company">
         </div>
         @if ( count($features) > 0 )
           @foreach( $features as $slug => $thumb )
-            <div class="carousel-item active">
+            <div class="carousel-item ">
               <img src="{{ \Storage::url( $thumb ) }}" class="d-block w-100" alt="{{ $slug }}">
             </div>
           @endforeach
@@ -100,7 +105,9 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://geo.dailymotion.com/player.html?video=x987sgg" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+                    <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
+                      <iframe allow="fullscreen" allowfullscreen height="100%" src="https://geo.dailymotion.com/player.html?video=x987sgg" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
