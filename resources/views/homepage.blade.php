@@ -35,11 +35,6 @@
       </button>
     </div>
 
-
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
         <!-- Three columns of text below the carousel -->
         <div class="row text-center mb-5">
@@ -77,122 +72,216 @@
     <p class="my-line" data-aos="fade-right"></p>
 
     <div class="container-fluid faqt py-6 mb-5">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-7">
-                   <div class="row g-4">
-                        <div class="col-sm-4 hvr-wobble-to-bottom-right">
-                            <div class="faqt-item bg-primary rounded p-4 text-center">
-                                <i class="fas fa-users fa-4x mb-4 text-white"></i>
-                                <h1 class="display-4 fw-bold" data-aos="flip-right" data-aos-duration="1500">452</h1>
-                                <p class="text-dark text-uppercase fw-bold mb-0">{{ __('Khách hàng') }}</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 hvr-wobble-vertical" >
-                            <div class="faqt-item bg-primary rounded p-4 text-center">
-                                <i class="fas fa-users-cog fa-4x mb-4 text-white"></i>
-                                <h1 class="display-4 fw-bold" data-aos="flip-right" data-aos-duration="1900">76</h1>
-                                <p class="text-dark text-uppercase fw-bold mb-0">{{ __('Dự án') }}</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 hvr-wobble-to-top-right">
-                            <div class="faqt-item bg-primary rounded p-4 text-center">
-                                <i class="fas fa-check fa-4x mb-4 text-white"></i>
-                                <h1 class="display-4 fw-bold" data-aos="flip-left" data-aos-duration="1600">11</h1>
-                                <p class="text-dark text-uppercase fw-bold mb-0">{{ __('Giải thưởng') }}</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <div class="row g-4">
+              <div class="col-sm-4 hvr-wobble-to-bottom-right">
+                <div class="faqt-item bg-warning rounded p-4 text-center">
+                    <i class="fas fa-users fa-4x mb-4 text-white"></i>
+                    <h1 class="display-4 fw-bold" data-aos="flip-right" data-aos-duration="1500">452</h1>
+                    <p class="text-dark text-uppercase fw-bold mb-0">{{ __('Khách hàng') }}</p>
                 </div>
-                <div class="col-lg-5">
-                    <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
-                      <iframe allow="fullscreen" allowfullscreen height="100%" src="https://geo.dailymotion.com/player.html?video=x987sgg" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
-                    </div>
+              </div>
+              <div class="col-sm-4 hvr-wobble-vertical" >
+                <div class="faqt-item bg-warning rounded p-4 text-center">
+                    <i class="fas fa-users-cog fa-4x mb-4 text-white"></i>
+                    <h1 class="display-4 fw-bold" data-aos="flip-right" data-aos-duration="1900">76</h1>
+                    <p class="text-dark text-uppercase fw-bold mb-0">{{ __('Dự án') }}</p>
                 </div>
+              </div>
+              <div class="col-sm-4 hvr-wobble-to-top-right">
+                <div class="faqt-item bg-warning rounded p-4 text-center">
+                    <i class="fas fa-check fa-4x mb-4 text-white"></i>
+                    <h1 class="display-4 fw-bold" data-aos="flip-left" data-aos-duration="1600">11</h1>
+                    <p class="text-dark text-uppercase fw-bold mb-0">{{ __('Giải thưởng') }}</p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-5">
+              <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
+                <iframe allow="fullscreen" allowfullscreen height="100%" src="https://geo.dailymotion.com/player.html?video=x987sgg" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+              </div>
+          </div>
         </div>
+      </div>
     </div>
 
     {{-- testimonial --}}
-    <div class="my-carousel overflow-hidden testimonials-slider ">
-      <div class="container py-sm-6 py-xl-6">
-        <div class="row text-center mb-2">
-          <span class="fw-semibold text-primary"></span>
-          <h4 class="h1 mt-3 mb-0">{{ __('Testimonial') }}</h4>
-        </div>
-        <div id="myCarousel" class="carousel slide" data-bs-ride="true">
-          <div class="carousel-inner">
-            <div class="carousel-item">
-                <div class="mx-auto max-w-4xl text-center">
-                    <figure class="m-0 mt-5">
-                        <blockquote class="text-center fw-semibold text-body-emphasis text-2xl leading-9">
-                            <p class="m-0">
-                                “Tôi thật sự rất hài lòng về công ty qua các khâu báo giá - khảo sát, thật sự rất kỹ lưỡng và chi tiết. Trong quá trình thi công theo đánh giá của tôi thì các công nhân tại công trình rất chịu khó, vui vẻ.”
-                            </p>
-                        </blockquote>
-
-                        <figcaption class="m-0 mt-5">
-                            <div class="mt-3 d-flex align-items-center justify-content-center text-base">
-                                <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-3 text-body-emphasis" fill="currentColor">
-                                    <circle cx="1" cy="1" r="1"></circle>
-                                </svg>
-                                <div class="fw-bold">Ông Đức Anh - giám đốc công ty Hattlaw</div>
+    <div class="testimonial-carousel overflow-hidden">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-12">     
+            <div id="testiminialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <h2 class="text-warning" data-aos="flip-up"><b>{{ __('Testimonial') }}</b></h2>
+              <!-- Carousel indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testiminialCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testiminialCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testiminialCarousel" data-bs-slide-to="2"></button>
+              </div>   
+              <!-- Wrapper for carousel items -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="testimonial">
+                        <p>“Bảng báo giá, dự toán của Công Ty chi tiết, rõ ràng, hợp lý hơn nhiều đơn vị khác nên tôi yên tâm lựa chọn Công Ty Kim Minh Phat thi công với hình thức giao thầu trọn gói”</p>
+                      </div>
+                      <div class="media">
+                        
+                        <div class="media-body">
+                          <div class="overview">
+                            <div class="name"><b>Ông Phan Gia Hưng</b></div>
+                            <div class="details">Khách hàng Q Bình Tân, TP HCM</div>
+                            <div class="star-rating">
+                              <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                              </ul>
                             </div>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="mx-auto max-w-4xl text-center">
-                    <figure class="m-0 mt-5">
-                        <blockquote class="text-center fw-semibold text-body-emphasis text-2xl leading-9">
-                            <p class="m-0">
-                                “Bảng báo giá, dự toán của Công Ty chi tiết, rõ ràng, hợp lý hơn nhiều đơn vị khác nên tôi yên tâm lựa chọn Công Ty Kim Minh Phat thi công với hình thức giao thầu trọn gói”
-                            </p>
-                        </blockquote>
-
-                        <figcaption class="m-0 mt-5">
-                            <div class="mt-3 d-flex align-items-center justify-content-center text-base">
-                                <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-3 text-body-emphasis" fill="currentColor">
-                                    <circle cx="1" cy="1" r="1"></circle>
-                                </svg>
-                                <div class="fw-bold">Khách hàng Lô 50, Đường 92, KĐT Thái Hưng, KĐT Mỹ Gia, Tp. Nha Trang</div>
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="testimonial">
+                        <p>“Công ty tạo cho mình cảm giác rất an tâm, mọi người làm việc rất chuẩn chỉ chuyên nghiệp ngay từ những khâu tư vấn - báo giá. Ngay từ đầu tôi đã thấy sự chuyên nghiệp cẩn thận khi thi công.”</p>
+                      </div>
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="overview">
+                            <div class="name"><b>Bà Phùng Thị Trang</b></div>
+                            <div class="details">Khách hàng Huỳnh Tấn Phát Q7</div>
+                            <div class="star-rating">
+                              <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                              </ul>
                             </div>
-                        </figcaption>
-                    </figure>
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>      
                 </div>
-            </div>
-
-            <div class="carousel-item active">
-                <div class="mx-auto max-w-4xl text-center">
-                    <figure class="m-0 mt-5">
-                        <blockquote class="text-center fw-semibold text-body-emphasis text-2xl leading-9">
-                            <p class="m-0">
-                                “Công ty tạo cho mình cảm giác rất an tâm, mọi người làm việc rất chuẩn chỉ chuyên nghiệp ngay từ những khâu tư vấn - báo giá. Ngay từ đầu tôi đã thấy sự chuyên nghiệp cẩn thận khi thi công.”
-                            </p>
-                        </blockquote>
-
-                        <figcaption class="m-0 mt-5">
-                            <div class="mt-3 d-flex align-items-center justify-content-center text-base">
-                                <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-3 text-body-emphasis" fill="currentColor">
-                                    <circle cx="1" cy="1" r="1"></circle>
-                                </svg>
-                                <div class="fw-bold">Bà Phùng Thị Trang - khách hàng Huỳnh Tấn Phát Q7</div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="testimonial">
+                        <p>Đây là căn nhà đầu tiên xây nên mình rất vui thấy nó được hoàn thành rất tốt. Hi vọng là sau này được hợp tác lần nữa.</p>
+                      </div>
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="overview">
+                            <div class="name"><b>Ông Huỳnh Vị Tài</b></div>
+                            <div class="details">Khách hàng An Bình P5 Q5 TpHCM</div>                      
+                            <div class="star-rating">
+                              <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                              </ul>
                             </div>
-                        </figcaption>
-                    </figure>
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="testimonial">
+                        <p>Công ty làm việc rất uy tín. Vật tư sử dụng trong công trình đảm bảo chất lượng, đúng như hợp đồng đã ký. Giám sát và đội ngũ thợ có trách nhiệm, thi công chuyên nghiệp.</p>
+                      </div>
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="overview">
+                            <div class="name"><b>Ông Huỳnh Tấn Hùng</b></div>
+                            <div class="details">Khách hàng Q Bình Tân TP HCM</div>
+                            <div class="star-rating">
+                              <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                              </ul>
+                            </div>
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>      
                 </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="testimonial">
+                        <p>“Tôi thật sự rất hài lòng về công ty qua các khâu báo giá - khảo sát, thật sự rất kỹ lưỡng và chi tiết. Trong quá trình thi công theo đánh giá của tôi thì các công nhân tại công trình rất chịu khó, vui vẻ.”</p>
+                      </div>
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="overview">
+                            <div class="name"><b>Khách hàng</b></div>
+                            <div class="details">Lô 50, Đường 92, KĐT Thái Hưng, KĐT Mỹ Gia, Tp. Nha Trang</div>
+                            <div class="star-rating">
+                              <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                              </ul>
+                            </div>
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="testimonial">
+                        <p>KIm Minh Phát hiểu được ý tưởng của anh tạo cho anh ngôi nhà như mong muốn. Từ khi thiết kế đến thi công rất cụ thể và chuyên nghiệp.</p>
+                      </div>
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="overview">
+                            <div class="name"><b>Ông Đức Anh</b></div>
+                            <div class="details">Giám đốc công ty Hattlaw</div>
+                            <div class="star-rating">
+                              <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                              </ul>
+                            </div>
+                          </div>                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>      
+                </div>
+              </div>
+              <!-- Carousel controls -->
+              <button type="button" class="carousel-control-prev" data-bs-target="#testiminialCarousel" data-bs-slide="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+                  <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
+                </svg>
+              </<button>
+              <button type="button" class="carousel-control-next" data-bs-target="#testiminialCarousel" data-bs-slide="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                  <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                </svg>
+              </button>
             </div>
           </div>
-          <button class="carousel-control-prev text-primary" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>

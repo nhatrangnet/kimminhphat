@@ -95,11 +95,14 @@
 
           <div class="col-6 col-md-2 mb-3">
             <ul class="nav flex-column">
-              <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="/" class="nav-link p-0">Home</a></li>
-              <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="{{ url( 'page/introduce' ) }}" class="nav-link p-0">{{ __('Giới thiệu') }}</a></li>
               @php
                 foreach( $categories as $cat ) {
-                  echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link p-0">' . __( $cat['name'] ) . '</a></li>';
+                  if( !empty( $cat['sub'] ) ) {
+                    foreach( $cat['sub'] as $slug => $name ) {
+                      echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $slug ) . '" class="nav-link p-0">' . __( $name ) . '</a></li>';
+                    }
+                  }
+                  else echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link p-0">' . __( $cat['name'] ) . '</a></li>';
                 }
               @endphp
               <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-right"><a href="{{ url( 'page/contact' ) }}" class="nav-link p-0">Contact</a></li>
