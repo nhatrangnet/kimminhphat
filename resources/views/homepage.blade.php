@@ -127,7 +127,7 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="testimonial">
-                        <p>“Bảng báo giá, dự toán của Công Ty chi tiết, rõ ràng, hợp lý hơn nhiều đơn vị khác nên tôi yên tâm lựa chọn Công Ty Kim Minh Phat thi công với hình thức giao thầu trọn gói”</p>
+                        <p>Bảng báo giá, dự toán của Công Ty chi tiết, rõ ràng, hợp lý hơn nhiều đơn vị khác nên tôi yên tâm lựa chọn Công Ty Kim Minh Phat thi công với hình thức giao thầu trọn gói”</p>
                       </div>
                       <div class="media">
                         
@@ -150,7 +150,7 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="testimonial">
-                        <p>“Công ty tạo cho mình cảm giác rất an tâm, mọi người làm việc rất chuẩn chỉ chuyên nghiệp ngay từ những khâu tư vấn - báo giá. Ngay từ đầu tôi đã thấy sự chuyên nghiệp cẩn thận khi thi công.”</p>
+                        <p>Công ty tạo cho mình cảm giác rất an tâm, mọi người làm việc rất chuẩn chỉ chuyên nghiệp ngay từ những khâu tư vấn - báo giá. Ngay từ đầu tôi đã thấy sự chuyên nghiệp cẩn thận khi thi công.”</p>
                       </div>
                       <div class="media">
                         <div class="media-body">
@@ -224,7 +224,7 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="testimonial">
-                        <p>“Tôi thật sự rất hài lòng về công ty qua các khâu báo giá - khảo sát, thật sự rất kỹ lưỡng và chi tiết. Trong quá trình thi công theo đánh giá của tôi thì các công nhân tại công trình rất chịu khó, vui vẻ.”</p>
+                        <p>Tôi thật sự rất hài lòng về công ty qua các khâu báo giá - khảo sát, thật sự rất kỹ lưỡng và chi tiết. Trong quá trình thi công theo đánh giá của tôi thì các công nhân tại công trình rất chịu khó, vui vẻ.”</p>
                       </div>
                       <div class="media">
                         <div class="media-body">
@@ -246,7 +246,7 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="testimonial">
-                        <p>KIm Minh Phát hiểu được ý tưởng của anh tạo cho anh ngôi nhà như mong muốn. Từ khi thiết kế đến thi công rất cụ thể và chuyên nghiệp.</p>
+                        <p>Kim Minh Phát hiểu được ý tưởng của anh tạo cho anh ngôi nhà như mong muốn. Từ khi thiết kế đến thi công rất cụ thể và chuyên nghiệp.</p>
                       </div>
                       <div class="media">
                         <div class="media-body">
