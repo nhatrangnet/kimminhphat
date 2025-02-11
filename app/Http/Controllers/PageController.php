@@ -22,7 +22,7 @@ class PageController extends Controller
      */
     public function page( $slug ): View
     {
-        $page = DB::table('posts')->where('slug', $slug )->paginate(15);
+        $page = DB::table('posts')->where('slug', $slug )->latest('updated_at')->paginate(15);
 
         if ( count( $page ) == 0 ) {
             return view('404');
@@ -57,7 +57,7 @@ class PageController extends Controller
             return view('404');
         }
 
-        $posts = DB::table('posts')->where('category_id', $category->id )->where('status', 1 )->paginate( 12 );
+        $posts = DB::table('posts')->where('category_id', $category->id )->where('status', 1 )->latest('updated_at')->paginate( 12 );
         if ( count( $posts ) == 0 ) {
             return view('404');
         }
@@ -80,7 +80,7 @@ class PageController extends Controller
         if ( empty( $category ) ) {
             return view('404');
         }
-        $posts = DB::table('posts')->where('category_id', $category->id )->where('status', 1 )->paginate( 12 );
+        $posts = DB::table('posts')->where('category_id', $category->id )->where('status', 1 )->latest('updated_at')->paginate( 12 );
 
         if ( count( $posts ) == 0 ) {
             return view('404');
