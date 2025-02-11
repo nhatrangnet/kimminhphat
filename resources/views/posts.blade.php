@@ -4,7 +4,7 @@
     </x-slot>
     <div class="container">
         <div class="row gx-xl-5 justify-content-between">
-            <div class="col-12">
+            <div class="col-8">
                 <h3 class="text-body-emphasis" data-aos="fade-up">{{ __( $title ) }}</h3>
                 <div class="row row-cols-1 row-cols-md-3 row-cols-xxl-4 gy-5 gx-md-5 justify-content-center justify-content-xl-between">
                     @foreach( $posts as $post )
@@ -19,11 +19,11 @@
                             </div>
 
                             <div class="position-relative">
-                                <h3 class="m-0 text-lg leading-6">
+                                <h6 class="mt-2 text-lg leading-6">
                                     <a href="{{ route( 'post.show', [ 'slug' => $post->slug ] ) }}" class="text-body-emphasis text-body-secondary-hover stretched-link fw-semibold link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
                                         {{ $post->title }}
                                     </a>
-                                </h3>
+                                </h6>
                             </div>
                             {{-- <div class="mt-1 d-flex column-gap-3 text-end">
                                 <time datetime="{{ date('Y-m-d', strtotime( $post->created_at )); }}" class="text-body-tertiary fst-italic fs-6 fs-">
@@ -39,6 +39,9 @@
                 <div class="py-5">
                     {{ $posts->links() }}
                 </div>
+            </div>
+            <div class="col-4">
+                @include('components/sidebar')
             </div>
 
             {{-- sidebar --}}
