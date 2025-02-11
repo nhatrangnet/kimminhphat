@@ -6,15 +6,15 @@
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        {{-- <div class="carousel-item active">
              <video width="100%" height="100%" preload="true" autoPlay muted controls>
                 <source src="images/new-year-eve.mp4" type="video/mp4">
               </video>
-        </div>
-        {{-- <div class="carousel-item">
+        </div> --}}
+        {{-- <div class="carousel-item ">
           <img src="images/banner-1.jpg" class="d-block w-100" alt="Kim Minh Phat company">
         </div> --}}
-        <div class="carousel-item ">
+        <div class="carousel-item active">
           <img src="images/banner-2.jpg" class="d-block w-100" alt="Kim Minh Phat company">
         </div>
         @if ( count($features) > 0 )
