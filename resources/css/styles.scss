@@ -17,7 +17,7 @@ img{
 }
 .main-menu{
   background: rgb(253,255,229);
-background: radial-gradient(circle, rgba(253,255,229,1) 0%, rgba(233,243,255,1) 100%);
+  background: radial-gradient(circle, rgba(253,255,229,1) 0%, rgba(233,243,255,1) 100%);
 }
 .main-menu .hotline{
   width: 100%;
@@ -38,6 +38,7 @@ background: radial-gradient(circle, rgba(253,255,229,1) 0%, rgba(233,243,255,1) 
 }
 .nav-item .nav-link{
   text-transform: uppercase;
+  font-weight: bold;
 }
 .nav-item .nav-link:hover{
   color: red;
@@ -364,6 +365,9 @@ background: radial-gradient(circle, rgba(253,255,229,1) 0%, rgba(233,243,255,1) 
 
 }
 @media (min-width: 768px){
+  .nav-item{
+    padding: 0 1rem;
+  }
   .marketing .brick{
     height: 250px;
     line-height: 250px;
