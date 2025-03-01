@@ -98,55 +98,55 @@
   </section>
 
   {{-- footer --}}
-  <div class="container">
-    <footer class="pt-5">
-      <div class="row">
-        <div class="col-12 col-md-4 mb-3 text-center" data-aos="flip-up" data-aos-duration="2000">
-          <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 60px;">
-          <p class="fw-bold mt-2"> {{ __('Công ty TNHH Xây Dựng Thương Mại Kim Minh Phát') }}</p>
-          <p><b>Phone:</b> 0979.357.494 (Mr.Phát) - 0903.046.057 (Mr.Quân)</p>
+  <section class="footer">
+    <footer class="container pt-5">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-3 text-center" data-aos="flip-up" data-aos-duration="2000">
+            <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 60px;">
+            <p class="fw-bold mt-2"> {{ __('Công ty TNHH Xây Dựng Thương Mại Kim Minh Phát') }}</p>
+            <p><b>Phone:</b> 0979.357.494 (Mr.Phát) - 0903.046.057 (Mr.Quân)</p>
 
-          <p><b>Email:</b> kimminhphat135@gmail.com</p>
-        </div>
+            <p><b>Email:</b> kimminhphat135@gmail.com</p>
+          </div>
 
-        <div class="col-6 col-md-2 mb-3">
-          <ul class="nav flex-column">
-            @php
-              foreach( $categories as $cat ) {
-                if( !empty( $cat['sub'] ) ) {
-                  foreach( $cat['sub'] as $slug => $name ) {
-                    echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $slug ) . '" class="nav-link p-0">' . __( $name ) . '</a></li>';
+          <div class="col-6 col-md-2 mb-3">
+            <ul class="nav flex-column">
+              @php
+                foreach( $categories as $cat ) {
+                  if( !empty( $cat['sub'] ) ) {
+                    foreach( $cat['sub'] as $slug => $name ) {
+                      echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $slug ) . '" class="nav-link p-0">' . __( $name ) . '</a></li>';
+                    }
                   }
+                  else echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link p-0">' . __( $cat['name'] ) . '</a></li>';
                 }
-                else echo '<li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-left"><a href="' . route( 'category.show', $cat['slug'] ) . '" class="nav-link p-0">' . __( $cat['name'] ) . '</a></li>';
-              }
-            @endphp
-            <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-right"><a href="{{ url( 'page/contact' ) }}" class="nav-link p-0">Contact</a></li>
+              @endphp
+              <li class="nav-item mb-2 hvr-underline-from-left" data-aos="fade-up-right"><a href="{{ url( 'page/contact' ) }}" class="nav-link p-0">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              {{ __('Đăng ký và nhận tin mới nhất của chúng tôi.') }}
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email...">
+                <button class="btn btn-primary" type="button">{{ __('Đăng ký') }}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <p class="my-line" data-aos="fate-right-right"></p>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
+          <p>© 2024 Kim Minh Phat Co,inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
           </ul>
         </div>
-
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            {{ __('Đăng ký và nhận tin mới nhất của chúng tôi.') }}
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email...">
-              <button class="btn btn-primary" type="button">{{ __('Đăng ký') }}</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <p class="my-line" data-aos="fate-right-right"></p>
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
-        <p>© 2024 Kim Minh Phat Co,inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
+      </footer>
+  </section>
   @stack('js')
 </body>
 </html>
