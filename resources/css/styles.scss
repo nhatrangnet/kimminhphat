@@ -15,6 +15,30 @@ img{
   background: rgb(240,224,106);
   background: linear-gradient(90deg, rgba(240,224,106,0.3211485277704832) 15%, rgba(242,242,18,1) 55%, rgba(208,232,25,0.11386561460521705) 100%);
 }
+.main-menu{
+  background: rgb(253,255,229);
+background: radial-gradient(circle, rgba(253,255,229,1) 0%, rgba(233,243,255,1) 100%);
+}
+.main-menu .hotline{
+  width: 100%;
+  background: url(../../images/bghotline.png)no-repeat top center;
+  line-height: 45px;
+  text-align: center;
+  padding-left: 80px;
+  color: #f00;
+  text-decoration: none;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.nav-item .nav-link{
+  text-transform: uppercase;
+}
 .nav-item .nav-link:hover{
   color: red;
 }

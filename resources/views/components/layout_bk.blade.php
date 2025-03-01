@@ -17,23 +17,27 @@
 <body>
   {{-- header --}}
   <div class="container1 main-menu">
-    <header class="container border-bottom lh-1 py-3">
+    <header class="border-bottom lh-1 py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
-        <div class="col-3 col-md-2 pt-1">
-          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-            <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 40px;">
+        <div class="col-4 pt-1">
+          <a class="link-secondary" href="#">Subscribe</a>
+        </div>
+        <div class="col-4 text-center">
+          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Large</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <a class="link-secondary" href="#" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
           </a>
-        </div>
-        <div class="col-9 col-md-7 text-center">
-          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#"><h3 class="text-uppercase">Công ty TNHH Xây Dựng Thương Mại Kim Minh Phát</h3></a>
-        </div>
-        <div class="d-none d-sm-flex col-md-3 justify-content-end align-items-center">
-          <a href="tel:0979357494" class="hotline">0979.357.494</a>
+          <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
         </div>
       </div>
     </header>
     <header class="px-0 px-md-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
-      <div class="col-md-2 mb-2 mb-md-0">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <img src="{{ \Storage::url( config( 'site.logo' ) ?? 'images/logo.png' ) }}" alt="kim-minh-phat-logo" style="height: 40px;">
+        </a>
       </div>
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li class="nav-item" data-aos="fade-up">
@@ -65,7 +69,7 @@
         <li class="nav-item" data-aos="fade-up"><a href="{{ url( '/page/contact' ) }}" class="nav-link">Contact</a></li>
       </ul>
 
-      <div class="col-md-3">
+      <div class="col-md-3 text-end">
         <a href="https://www.facebook.com/profile.php?id=61566311985557&mibextid=ZbWKwL" target="blank" title="Facebook">
           <svg height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="16" cy="16" r="14" fill="url(#paint0_linear_87_7208)"/>
