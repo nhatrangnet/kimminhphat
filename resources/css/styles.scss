@@ -36,6 +36,16 @@ img{
   /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
+.my-menu{
+  background: #fffdce;
+}
+.nav-item:hover{
+  transform: translateY(-5px);
+  background: #fffa89;
+}
+.nav-item:hover .nav-link{
+  transform: translateY(-2px);
+}
 .nav-item .nav-link{
   text-transform: uppercase;
   font-weight: bold;
@@ -368,7 +378,7 @@ section.footer{
 }
 @media (min-width: 768px){
   .nav-item{
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
   }
   .marketing .brick{
     height: 250px;

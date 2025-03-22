@@ -32,7 +32,7 @@
         </div>
       </div>
     </header>
-    <header class="px-0 px-md-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
+    <header class="my-menu d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
       <div class="col-md-2 mb-2 mb-md-0">
       </div>
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
