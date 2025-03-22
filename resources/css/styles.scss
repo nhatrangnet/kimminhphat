@@ -2,7 +2,7 @@
   font-family: "Roboto", sans-serif;
 }
 header{
-/* 	background: url('https://kimminhphat.com/images/thiet-ke-xay-dung-small.jpg') top center no-repeat; */
+/*  background: url('https://kimminhphat.com/images/thiet-ke-xay-dung-small.jpg') top center no-repeat; */
 }
 img{
   max-width: 100%;
@@ -40,29 +40,52 @@ img{
   background: #fffdce;
 }
 .nav-item:hover{
-  transform: translateY(-5px);
   background: #fffa89;
-}
-.nav-item:hover .nav-link{
-  transform: translateY(-2px);
 }
 .nav-item .nav-link{
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
-.nav-item .nav-link:hover{
-  color: red;
+.nav-item .nav-link:not(.dropdown-toggle){
+  transform: translateY(-1px);
 }
+.nav-item .nav-link:not(.dropdown-toggle),
+.nav-item .nav-link:not(.dropdown-toggle):after,
+.nav-item .nav-link:not(.dropdown-toggle):before {
+  transition: all .5s;
+}
+.nav-item .nav-link:not(.dropdown-toggle){
+  position: relative;
+}
+.nav-item .nav-link:not(.dropdown-toggle):after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #9f9908;
+  height: 1px;
+}
+
+.nav-item .nav-link:not(.dropdown-toggle):hover:after {
+  width: 100%;
+}
+
+
 .carousel{
-	margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .marketing .brick{
-	height: 140px;
-	line-height: 140px;
+  height: 140px;
+  line-height: 140px;
 }
 .home-video{
-	position: relative;
+  position: relative;
   height: 100%;
   min-height: 400px;
   background: linear-gradient(rgba(254, 218, 154, 0.1), rgba(254, 218, 154, 0.1)), url(../img/fact.jpg);
@@ -377,8 +400,8 @@ section.footer{
 
 }
 @media (min-width: 768px){
-  .nav-item{
-    padding: 0.5rem 1rem;
+  .nav-item .nav-link{
+    padding: 1rem 2rem;
   }
   .marketing .brick{
     height: 250px;
