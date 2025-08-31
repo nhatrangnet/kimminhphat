@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- pagination -->
-                <div class="py-5">
+                <div class="py-5 pagination">
                     {{ $posts->links() }}
                 </div>
             </div>
