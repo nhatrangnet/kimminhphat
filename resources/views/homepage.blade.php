@@ -101,7 +101,7 @@
           </div>
           <div class="col-lg-5">
               <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%">
-                <iframe allow="fullscreen" allowfullscreen height="100%" src="https://www.dailymotion.com/video/x9pqfhi" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+                <iframe allow="fullscreen" allowfullscreen height="100%" src="https://geo.dailymotion.com/player.html?video=x9pqfhi" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
               </div>
           </div>
         </div>
